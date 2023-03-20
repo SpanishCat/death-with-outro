@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "arrowlauncher",
+  "version": "${version}",
+
+  "name": "Arrow Launcher",
+  "description": "Like a grenade launcher, but with arrows!",
+  "authors": [
+    "Spanish Cat (a.k.a Stivivon)"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "MIT License",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.spanishcat.arrowlauncher.Mod"
+    ],
+    "client": [
+      "net.spanishcat.arrowlauncher.ModClient"
+    ]
+  },
+  "mixins": [
+    "arrowlauncher.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.11",
+    "fabric-api": "*",
+    "minecraft": "~1.19.4",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
