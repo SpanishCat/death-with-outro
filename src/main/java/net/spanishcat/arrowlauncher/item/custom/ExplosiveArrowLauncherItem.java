@@ -22,7 +22,6 @@ public class ExplosiveArrowLauncherItem extends Item {
         if (!world.isClient){
             // Launch arrow
             ExplosiveArrowEntity arrow = new ExplosiveArrowEntity(ModEntities.EXPLOSIVE_ARROW, world);
-//            ExplosiveArrowEntity arrow = new ExplosiveArrowEntity(world, user);
             world.spawnEntity(arrow);
             arrow.setPos(user.getX(), user.getY() + 1, user.getZ());
             arrow.setVelocity(user, user.getPitch(), user.getYaw(), user.getRoll(), Mod.LAUNCH_SPEED, Mod.LAUNCH_DIVERGENCE);
