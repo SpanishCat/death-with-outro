@@ -2,27 +2,14 @@ package net.spanishcat.arrowlauncher.entity.custom;
 
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.TntEntity;
 import net.minecraft.entity.projectile.ArrowEntity;
 import net.minecraft.world.World;
 
 public class ExplosiveArrowEntity extends ArrowEntity {
     public ExplosiveArrowEntity(EntityType<? extends ArrowEntity> entityType, World world) { super(entityType, world); }
-//    public ExplosiveArrowEntity(World world, double x, double y, double z) { super(EntityType.ARROW, x, y, z, world); }
-//    public ExplosiveArrowEntity(World world, LivingEntity owner) { super(world, owner); }
-
-//    CowEntity cow = new CowEntity(EntityType.COW, world);
-
-//    @Override
-//    public boolean isOnGround() {
-//
-//        return super.isOnGround();
-//    }
 
     public void explode(){
-        TntEntity tnt = new TntEntity(EntityType.TNT, world);
-        tnt.setPos(this.getX(), this.getY(), this.getZ());
-        world.spawnEntity(tnt);
+        this.world.createExplosion(this, this.getX(), this.getBodyY(0.0625), this.getZ(), 6.0F, World.ExplosionSourceType.TNT);
         this.kill();
     }
 
