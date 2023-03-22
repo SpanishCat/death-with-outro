@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "arrowlauncher",
+  "id": "deathwithoutro",
   "version": "${version}",
 
-  "name": "Arrow Launcher",
-  "description": "Like a grenade launcher, but with arrows!",
+  "name": "Death with Outro",
+  "description": "Plays the outro meme song when you die",
   "authors": [
     "Spanish Cat (a.k.a Stivivon)"
   ],
@@ -19,14 +19,14 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.spanishcat.arrowlauncher.Mod"
+      "net.spanishcat.deathwithoutro.Mod"
     ],
     "client": [
-      "net.spanishcat.arrowlauncher.ModClient"
+      "net.spanishcat.deathwithoutro.ModClient"
     ]
   },
   "mixins": [
-    "arrowlauncher.mixins.json"
+    "deathwithoutro.mixins.json"
   ],
 
   "depends": {
